@@ -28,10 +28,13 @@ pub fn run(program:Vec<Instruction>){
                 location+=1;
             },
             Instruction::In=>{
-                memory[location]=std::io::stdin().bytes().next().unwrap_or(Ok(0)).unwrap_or(0);
+                let mut input_str:String=String::new();
+                std::io::stdin().read_line(&mut input_str).unwrap();
+                memory[location]= input_str.chars().take(1).last().unwrap_or(' ') as u8;
+                //memory[location]=std::io::stdin().bytes().next().unwrap_or(Ok(0)).unwrap_or(0);
             },
             Instruction::Out=>{
-                print!("{}", std::str::from_utf8(&[memory[location]]).unwrap_or(""));
+                println!("{}", std::str::from_utf8(&[memory[location]]).unwrap_or(""));
             },
             Instruction::Nop=>{}
         }
