@@ -10,14 +10,14 @@ pub enum Instruction{
     Nop,
 }
 
-
+#[inline(always)]
 pub fn parse(source_code:String)->Vec<Instruction>{
 let symbols:Vec<char> = source_code.chars().collect();
 
 symbols.iter().map(|sym| tokenize(sym)).collect()
 
 }
-
+#[inline(always)]
 fn tokenize(symbols:&char)->Instruction{
     match symbols {
         '>' | '🤔'|'👉'=>Instruction::MoveR,

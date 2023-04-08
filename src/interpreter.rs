@@ -39,14 +39,6 @@ pub fn run(program:Vec<Instruction>){
         }
     }
 
-
-
 }
 
-
-
-/*fn execute(instruction: parser::Instruction,cell_v:u8,cell_i:u16){
-
-}
-*/
 
