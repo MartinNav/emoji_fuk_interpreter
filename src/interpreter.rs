@@ -3,10 +3,6 @@ use std::io::Read;
 use crate::parser::Instruction;
 
 
-//mod parser;
-
-
-
 
 pub fn run(program:Vec<Instruction>){
 

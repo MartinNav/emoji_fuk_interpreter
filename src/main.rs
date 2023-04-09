@@ -1,4 +1,5 @@
 use std::env;
+//mod tests;
 mod parser;
 mod interpreter;
 
