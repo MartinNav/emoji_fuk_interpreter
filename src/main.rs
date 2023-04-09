@@ -13,7 +13,8 @@ fn main(){
                     match env::args().nth(2) {
                         Some(directory) => {
                             println!("Reading data from directory: {}",directory);
-                            //TODO: loading data logic
+                            code = std::fs::read_to_string(directory)
+                            .expect("You have provided invalid directory\nShutting down");
                         },
                         None => {
                             println!("Argument was not provided\nShutting down...");
