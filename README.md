@@ -3,3 +3,7 @@ Because Brainfuck is not esoteric enough I have decided to add emojies as valid 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=MartinNav&repo=emoji_fuk_interpreter)](https://github.com/MartinNav/emoji_fuk_interpreter)
 ## Code samples
 Yes, this is valid code: `☝🤯👉🤯☝🤯👉☝🤯👉☝🤯👎🤒👎🤒👇`, it takes input and reverses the string and it adds 1 to every character.
+## Additional info
+It is important to mention, that all brainfuck code, that does not have loops is fully compatible.
+## Usage
+If you want to run the interpreter to inerpret `emojifuck` while running interpreter with cargo use `cargo run -- -dir program.ef`
