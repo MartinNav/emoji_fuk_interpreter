@@ -4,7 +4,7 @@ use crate::parser::Instruction;
 
 
 
-pub fn run(program:Vec<Instruction>){
+pub fn run(program:&Vec<Instruction>){
 
     let mut memory =[0u8;30_000];
     let mut location = 15_000;

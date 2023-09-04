@@ -41,7 +41,7 @@ fn main(){
     }
 
     let parsed = parser::parse(code);
-    interpreter::run(parsed);
+    interpreter::run(&parsed);
     
     
 }

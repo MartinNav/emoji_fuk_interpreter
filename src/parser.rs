@@ -19,7 +19,6 @@ let symbols:Vec<char> = source_code.chars().collect();
 symbols.iter().map(|sym| tokenize(sym)).collect()
 
 }
-#[inline(always)]
 fn tokenize(symbols:&char)->Instruction{
     match symbols {
         '>' | '🤔'|'👉'=>Instruction::MoveR,
@@ -28,8 +27,8 @@ fn tokenize(symbols:&char)->Instruction{
         '-'|'🥶'|'🥴'=>Instruction::Sub,
         '.'|'👇'|'👎'=>Instruction::Out,
         ','|'☝'|'👍'=>Instruction::In,
-        '[' =>Instruction::JR,
-        ']'=>Instruction::JL,
+        '['|'⏭' =>Instruction::JR,
+        ']'|'⏮'=>Instruction::JL,
         _=>Instruction::Nop,
     }
 }
