@@ -8,6 +8,8 @@ pub enum Instruction{
     Out,
     In,
     Nop,
+    JR,
+    JL,
 }
 
 #[inline(always)]
@@ -26,6 +28,8 @@ fn tokenize(symbols:&char)->Instruction{
         '-'|'🥶'|'🥴'=>Instruction::Sub,
         '.'|'👇'|'👎'=>Instruction::Out,
         ','|'☝'|'👍'=>Instruction::In,
+        '[' =>Instruction::JR,
+        ']'=>Instruction::JL,
         _=>Instruction::Nop,
     }
 }
